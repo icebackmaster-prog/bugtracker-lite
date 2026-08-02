@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report Bug</title>
 
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h1>🐞 Report New Bug</h1>
+
+<form method="POST">
+
+<label>Bug Title</label>
+
+<input
+type="text"
+name="title"
+placeholder="Enter bug title"
+required>
+
+<label>Description</label>
+
+<textarea
+name="description"
+rows="6"
+placeholder="Describe the issue..."
+required></textarea>
+
+<label>Priority</label>
+
+<select name="priority">
+
+<option>Low</option>
+
+<option>Medium</option>
+
+<option>High</option>
+
+</select>
+
+<button type="submit">
+
+Submit Bug
+
+</button>
+
+</form>
+
+<a href="/">← Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

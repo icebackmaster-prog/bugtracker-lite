@@ -1,1 +1,203 @@
+/* ==========================
+   BugTracker Lite v1.0
+   THE HUNTER DEV
+========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:#ffffff;
+}
+
+/* Header */
+
+header{
+    background:#161b22;
+    padding:30px;
+    text-align:center;
+    border-bottom:2px solid #00ff41;
+}
+
+header h1{
+    color:#00ff41;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+header p{
+    color:#bdbdbd;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#00ff41;
+    color:#000;
+    padding:12px 24px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#00cc33;
+    transform:scale(1.05);
+}
+
+/* Dashboard */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.bug-card{
+    background:#161b22;
+    padding:20px;
+    border-left:5px solid #00ff41;
+    border-radius:12px;
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.bug-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(0,255,65,.25);
+}
+
+.bug-card h2{
+    color:#00ff41;
+    margin-bottom:10px;
+}
+
+.bug-card p{
+    color:#d1d5db;
+    line-height:1.6;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.priority,
+.status{
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.priority{
+    background:#ff9800;
+    color:#fff;
+}
+
+.status{
+    background:#00ff41;
+    color:#000;
+}
+
+/* Empty */
+
+.empty{
+    text-align:center;
+    padding:60px;
+}
+
+/* Form */
+
+.form-container{
+    width:90%;
+    max-width:700px;
+    margin:50px auto;
+    background:#161b22;
+    padding:35px;
+    border-radius:15px;
+}
+
+.form-container h1{
+    text-align:center;
+    color:#00ff41;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:14px;
+    background:#0d1117;
+    border:1px solid #30363d;
+    border-radius:8px;
+    color:#fff;
+    outline:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#00ff41;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:15px;
+    border:none;
+    background:#00ff41;
+    color:#000;
+    font-size:17px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#00cc33;
+}
+
+.form-container a{
+    display:block;
+    text-align:center;
+    color:#00ff41;
+    margin-top:20px;
+    text-decoration:none;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:30px;
+}
+
+.info{
+    flex-direction:column;
+    gap:10px;
+}
+
+.form-container{
+    padding:25px;
+}
+
+}

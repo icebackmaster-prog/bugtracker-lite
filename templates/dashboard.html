@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugTracker Lite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
+<header>
+    <h1>🐞 BugTracker Lite</h1>
+    <p>Find It. Track It. Fix It.</p>
+
+    <a href="/submit" class="btn">+ Report Bug</a>
+</header>
+
+<div class="container">
+
+{% if bugs %}
+
+{% for bug in bugs %}
+
+<div class="bug-card">
+
+<h2>{{ bug.title }}</h2>
+
+<p>{{ bug.description }}</p>
+
+<div class="info">
+
+<span class="priority">
+Priority: {{ bug.priority }}
+</span>
+
+<span class="status">
+{{ bug.status }}
+</span>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+{% else %}
+
+<div class="empty">
+<h2>No Bugs Found</h2>
+<p>Click "Report Bug" to create your first bug.</p>
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
